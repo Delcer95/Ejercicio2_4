@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Ejercicio2_4.MainPage"
+             BackgroundColor="white">
+
+    <StackLayout>
+
+
+        <StackLayout Orientation="Vertical">
+            <Frame BackgroundColor="Red" Padding="20" CornerRadius="0">
+                <Label Text="Ejercicio 2.4 - Grupo #1" 
+                        HorizontalTextAlignment="Center" 
+                        TextColor="White" 
+                        FontSize="20"/>
+            </Frame>
+
+            <toolkit:MediaElement
+                    x:Name="img"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    BackgroundColor="White"
+                    Margin="40,30,40,0"
+                    Source="{Binding imagen}" />
+
+            <Label Text="Nombre" 
+                    FontSize="16" 
+                    TextColor="Black"
+                    Padding="20,30,30,0"/>
+
+            <Entry x:Name="txtnombre" 
+                    Placeholder="Ingrese su nombre"
+                    Margin="20,-5,30,0" 
+                    FontSize="16" 
+                    TextColor="Black"
+                    Text="{Binding nombres}"/>
+
+            <Label Text="Descripcion" 
+                    FontSize="16" 
+                    TextColor="Black"
+                    Padding="20,10,30,0"/>
+
+            <Entry x:Name="txtdescripcion" 
+                    Placeholder="Ingrese una descripcion"
+                    Margin="20,-5,30,0" 
+                    FontSize="16" 
+                    TextColor="Black"
+                    Text="{Binding descripcion}"/>
+
+            <Grid Margin="0,20,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Grabar Video" 
+                    x:Name="btnFoto" 
+                    Clicked="btnFoto_Clicked" 
+                    Margin="0,0,0,0" 
+                    WidthRequest="150" 
+                    CornerRadius="5"
+                    BackgroundColor="DarkBlue"
+                    TextColor="White"
+                    TextTransform="None"
+                    FontSize="16"
+                    HorizontalOptions="Center"/>
+
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Salvar"
+                    x:Name="btnSQlite"
+                    Clicked="btnSQlite_Clicked" 
+                    Margin="0,0,0,0" 
+                    CornerRadius="5"
+                    BackgroundColor="DarkSlateBlue"
+                    TextColor="White"
+                    TextTransform="None"
+                    FontSize="16"
+                    WidthRequest="150" 
+                    HorizontalOptions="Center" />
+
+
+            </Grid>
+            <Button
+                Text="Lista de videos"
+                x:Name="btnLista"
+                Clicked="btnLista_clicked" 
+                Margin="0,20,0,0" 
+                CornerRadius="5"
+                BackgroundColor="CornflowerBlue"
+                TextColor="White"
+                TextTransform="None"
+                FontSize="16"
+                WidthRequest="150" 
+                HorizontalOptions="Center" 
+                />
+
+
+        </StackLayout>
+
+
+
+
+    </StackLayout>
+
+</ContentPage>
